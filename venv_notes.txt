@@ -1,1 +1,11 @@
-Virtual environments allows you to maintain different python environmets for different projects.
+virtual environments allows you to maintain different python environmets for different projects.
+
+1. pip install virtualenv
+2. pip list
+3. mkdir Environments
+4. cd Environments
+5. virtualenv project1
+6. source project2/bin/activate
+7. pip freeze --local >> requirements.txt 	[--local takes only the local dependencies.]
+8. deactivate 					[to exit from the local environment.]
+9. pip install -r requirements.txt 		[command to install packages from requirements file.]
