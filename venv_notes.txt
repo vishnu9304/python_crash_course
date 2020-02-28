@@ -1,0 +1,1 @@
+Virtual environments allows you to maintain different python environmets for different projects.
