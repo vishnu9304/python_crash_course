@@ -5,22 +5,44 @@
 5. python --version
 6. django-admin startproject django_pro
 7. cd django_pro
-8. You will see "manage.py" file and "django_pro" directory
+8. you will see "manage.py" file and "django_pro" directory
 9. "manage.py" allows us to run command line commands
 10. "django_pro" directory 
 11. Inside "django_pro" directory there will be a file called "urls.py" where we will be setting up the mappings/routes.
 12. python manage.py runserver
 13. python manage.py startapp [appname]
-14. Everytime we create a new app, it should be added to "INSTALLED_APPS" list under "settings.py" module under main project folder.
+14. everytime we create a new app, it should be added to "INSTALLED_APPS" list under "settings.py" module under main project folder.
     1.Inside you app there will be a module called "apps.py" copy the "class name" from that file and add it under "INSTALLED_APPS" list.
-    Example: INSTALLED_APPS = ['blog.apps.BlogConfig']
+	Example: INSTALLED_APPS = ['blog.apps.BlogConfig']
 
 -----------------
 Django Templates
 -----------------
+1. create a folder called  "templates" under the app directory.
+	By default django will look for "templates" sub-directory in each of our installed apps.
+2. under the "templates" create a sub-directory with name of the app. (This is a django convention).
+3. [app_directory] --> [templates] --> [directory_with_app_name] --> (template files). 
 
-1. Create a folder called  "templates" under the app directory. 
-   By default django will look for "templates" sub-directory in each of our installed apps.
-2. Under the "templates" create a sub-directory with name of the app. (This is a django convention).
-3. [app_directory] --> [templates] --> [directory_with_app_name] --> (template files).
-4.  
+--------------------------
+Python Templating Engine
+--------------------------
+Python templating engine allows us to write code inside templates.
+
+	Code Block: {%	%}
+	To Access a variable: {{ }}
+
+Example:
+	{% for post in posts %}
+		<h1>{{ post.title }}</h1>
+		<p1>Posted by {{ post.author }} on {{ post.posted_date }}</p1>
+	{% endfor %}
+
+--------------------------
+Template Inheritance
+--------------------------
+
+[templates] --> [directory_with_app_name] --> [base.html]
+
+to inherit the base template add "{% extends "blog/base.html" %}" in other templates.
+
+
