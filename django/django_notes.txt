@@ -1,0 +1,26 @@
+1. virtualenv django_env
+2. source django_env/bin/activate
+3. pip3 install django
+4. python -m django --version
+5. python --version
+6. django-admin startproject django_pro
+7. cd django_pro
+8. You will see "manage.py" file and "django_pro" directory
+9. "manage.py" allows us to run command line commands
+10. "django_pro" directory 
+11. Inside "django_pro" directory there will be a file called "urls.py" where we will be setting up the mappings/routes.
+12. python manage.py runserver
+13. python manage.py startapp [appname]
+14. Everytime we create a new app, it should be added to "INSTALLED_APPS" list under "settings.py" module under main project folder.
+    1.Inside you app there will be a module called "apps.py" copy the "class name" from that file and add it under "INSTALLED_APPS" list.
+    Example: INSTALLED_APPS = ['blog.apps.BlogConfig']
+
+-----------------
+Django Templates
+-----------------
+
+1. Create a folder called  "templates" under the app directory. 
+   By default django will look for "templates" sub-directory in each of our installed apps.
+2. Under the "templates" create a sub-directory with name of the app. (This is a django convention).
+3. [app_directory] --> [templates] --> [directory_with_app_name] --> (template files).
+4.  
