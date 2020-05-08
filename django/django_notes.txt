@@ -1,4 +1,4 @@
-1. virtualenv django_env
+1. virtualenv django_env (OR) virtualenv -p python3 django
 2. source django_env/bin/activate
 3. pip3 install django
 4. python -m django --version
